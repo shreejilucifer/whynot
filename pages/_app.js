@@ -6,12 +6,21 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         margin: 0; 
         padding: 0;
-    }
+	}
 `;
 
 const theme = {
-	colors: {},
-	fonts: {},
+	colors: {
+		black: '#121212',
+		white: '#ffffff',
+		primary: '#48486e',
+		secondary: '#34b3d3',
+		danger: '#f24747',
+		background: '#f2f4f8',
+	},
+	fonts: {
+		primary: `'Roboto', sans-serif`,
+	},
 	sizes: {},
 };
 
