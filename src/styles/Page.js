@@ -12,4 +12,9 @@ export const Content = styled.div`
 	padding-right: 5%;
 	padding-top: 1em;
 	padding-bottom: 1em;
+
+	@media only screen and (max-width: 425px) {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
 `;
