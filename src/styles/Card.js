@@ -5,6 +5,11 @@ export const CardLayout = styled.div`
 	margin-right: 1%;
 	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 0.2em;
+	min-height: 20em;
+	@media only screen and (max-width: 425px) {
+		min-height: auto;
+		margin-bottom: 1em;
+	}
 `;
 
 export const Title = styled.div`
