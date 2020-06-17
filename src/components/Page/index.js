@@ -1,6 +1,7 @@
 import { Layout, Content } from '../../styles/Page';
 import Navbar from '../Navbar';
 import Head from 'next/head';
+import Footer from '../Footer';
 
 const Page = ({ title, children }) => {
 	return (
@@ -10,6 +11,7 @@ const Page = ({ title, children }) => {
 			</Head>
 			<Navbar />
 			<Content>{children}</Content>
+			<Footer />
 		</Layout>
 	);
 };

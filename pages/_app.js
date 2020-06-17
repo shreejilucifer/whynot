@@ -7,11 +7,15 @@ const GlobalStyle = createGlobalStyle`
         margin: 0; 
         padding: 0;
 	}
+
+	body {
+		color: #48486e;
+	}
 `;
 
 const theme = {
 	colors: {
-		black: '#121212',
+		black: '#48486e',
 		white: '#ffffff',
 		primary: '#48486e',
 		secondary: '#34b3d3',

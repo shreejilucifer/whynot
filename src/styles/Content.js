@@ -135,3 +135,56 @@ export const LegendContainer = styled.div`
 		}
 	}
 `;
+
+export const ReportContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid #f2f4f8;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 3%;
+	padding-right: 3%;
+	&:hover {
+		cursor: pointer;
+		background-color: #f2f4f8;
+	}
+	& > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: flex-start;
+		min-height: 3em;
+		& > img {
+			height: 3em;
+		}
+
+		& > span {
+			font-family: ${(props) => props.theme.fonts.primary};
+		}
+	}
+`;
+
+export const UpdateContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-bottom: 1px solid #f2f4f8;
+	&:hover {
+		cursor: pointer;
+		background-color: #f2f4f8;
+	}
+
+	& > span:nth-child(1) {
+		font-weight: 500;
+		font-family: ${(props) => props.theme.fonts.primary};
+	}
+
+	& > span:nth-child(2) {
+		font-family: ${(props) => props.theme.fonts.primary};
+		margin-top: 0.5em;
+	}
+`;
