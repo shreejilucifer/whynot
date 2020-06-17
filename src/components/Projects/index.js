@@ -1,0 +1,92 @@
+import { ProjectsContainer, Project } from '../../styles/Projects';
+
+export default function ProjectsContent() {
+	return (
+		<ProjectsContainer>
+			<Project>
+				<div>
+					<span>{'>'}</span>
+				</div>
+				<div>
+					<span>Sappi</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Applications</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Tests/BM</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Open Vulnerabilities</span>
+				</div>
+				<div></div>
+			</Project>
+			<Project>
+				<div>
+					<span>{'>'}</span>
+				</div>
+				<div>
+					<span>Sappi</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Applications</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Tests/BM</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Open Vulnerabilities</span>
+				</div>
+				<div></div>
+			</Project>
+			<Project>
+				<div>
+					<span>{'>'}</span>
+				</div>
+				<div>
+					<span>Sappi</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Applications</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Tests/BM</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Open Vulnerabilities</span>
+				</div>
+				<div></div>
+			</Project>
+			<Project>
+				<div>
+					<span>{'>'}</span>
+				</div>
+				<div>
+					<span>Sappi</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Applications</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Tests/BM</span>
+				</div>
+				<div>
+					<span>0</span>
+					<span>Open Vulnerabilities</span>
+				</div>
+				<div></div>
+			</Project>
+		</ProjectsContainer>
+	);
+}
