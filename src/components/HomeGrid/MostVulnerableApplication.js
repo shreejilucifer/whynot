@@ -5,7 +5,7 @@ export default function MostVulnerableApplication() {
 	return (
 		<Card title="Most Vulnerable Application">
 			<Table>
-				<TableHeader>
+				<TableHeader span="20% 15% 10% 10% 10% 10% 10% 15%">
 					<span>Application</span>
 					<span>Last Test Date</span>
 					<span>Critical</span>
@@ -15,7 +15,7 @@ export default function MostVulnerableApplication() {
 					<span>Info</span>
 					<span>Severity</span>
 				</TableHeader>
-				<TableRow>
+				<TableRow span="20% 15% 10% 10% 10% 10% 10% 15%">
 					<span>
 						<p>sappi xyz</p>
 						<a href="#">https://sappi.xyz</a>

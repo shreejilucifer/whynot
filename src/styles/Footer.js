@@ -13,11 +13,20 @@ export const Container = styled.div`
 	padding-left: 5%;
 	padding-right: 5%;
 
-	& > div {
+	& > div:nth-child(1) {
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		align-items: center;
+
+		@media only screen and (max-width: 425px) {
+			flex-direction: column;
+			margin-bottom: 1em;
+		}
+	}
+
+	@media only screen and (max-width: 425px) {
+		flex-direction: column;
 	}
 `;
 
@@ -31,6 +40,11 @@ export const Logo = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin-right: 1em;
+
+	@media only screen and (max-width: 425px) {
+		margin-right: 0;
+		margin-bottom: 1em;
+	}
 `;
 
 export const Copyright = styled.div`
@@ -38,7 +52,6 @@ export const Copyright = styled.div`
 `;
 
 export const Links = styled.div`
-	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -49,5 +62,17 @@ export const Links = styled.div`
 		text-decoration: none;
 		color: ${(props) => props.theme.colors.black};
 		margin-right: 1.5em;
+	}
+
+	@media only screen and (max-width: 425px) {
+		flex-wrap: wrap;
+		width: 100%;
+		& a {
+			width: 33.33%;
+			margin-right: 0;
+			text-align: center;
+		}
+		/* display: grid;
+		grid-template-columns: 33.33% 33.33% 33.33%; */
 	}
 `;

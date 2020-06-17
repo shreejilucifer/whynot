@@ -9,7 +9,7 @@ export const TableHeader = styled.div`
 	min-height: 3em;
 	background-color: #f2f4f8;
 	display: grid;
-	grid-template-columns: 20% 15% 10% 10% 10% 10% 10% 15%;
+	grid-template-columns: ${(props) => props.span};
 	margin-bottom: 1em;
 	& > span {
 		display: flex;
@@ -22,7 +22,7 @@ export const TableHeader = styled.div`
 
 export const TableRow = styled.div`
 	display: grid;
-	grid-template-columns: 20% 15% 10% 10% 10% 10% 10% 15%;
+	grid-template-columns: ${(props) => props.span};
 	border-bottom: 1px solid #f2f4f8;
 	& > span {
 		padding-left: 5%;
