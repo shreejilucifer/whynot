@@ -1,6 +1,9 @@
 import BreadCrumb from '../TitleHeader/BreadCrumb';
 import { Container, Stat } from '../../styles/Application';
 import { Grid } from '../../styles/Grid';
+import Catalog from './Catalog';
+import VulnerabilityClassification from './VulnerabilityClassification';
+import OWASPIndicators from './OWASPIndicators';
 
 const Name = 'sappi xyz';
 
@@ -9,7 +12,10 @@ export default function Application() {
 		<React.Fragment>
 			<BreadCrumb nav={`Home>Projects>${Name}`} />
 			<Container>
-				<Grid span="25% 25% 23% 23% auto">
+				<Grid
+					span="25% 25% 23% 23% auto"
+					style={{ borderBottom: '1px solid #dfe4ef', paddingBottom: '1em' }}
+				>
 					<Stat>
 						<img src="/img/projects.svg" alt="Projects" />
 						<p>
@@ -43,7 +49,18 @@ export default function Application() {
 						</p>
 					</Stat>
 				</Grid>
+				<Grid span="33.33% 33.33% 33.33%">
+					<Catalog />
+					<VulnerabilityClassification />
+					<OWASPIndicators />
+				</Grid>
 			</Container>
 		</React.Fragment>
 	);
 }
+
+/* 
+
+<Card title="Vulnerability Classifications">2</Card>
+                    <Card title="OWASP - Top 10 Indicators">3</Card>
+                    */

@@ -97,7 +97,7 @@ export const CatalogRingDetails = styled.div`
 export const LegendContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+
 	align-items: center;
 	flex-wrap: wrap;
 
@@ -135,6 +135,11 @@ export const LegendContainer = styled.div`
 	& > span:nth-child(4) {
 		& > div {
 			background-color: ${(props) => props.colors[3]};
+		}
+	}
+	& > span:nth-child(5) {
+		& > div {
+			background-color: ${(props) => props.colors[4]};
 		}
 	}
 `;

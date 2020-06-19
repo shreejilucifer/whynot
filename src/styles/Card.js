@@ -6,6 +6,7 @@ export const CardLayout = styled.div`
 	background-color: ${(props) => props.theme.colors.white};
 	border-radius: 0.2em;
 	min-height: 20em;
+	border: 1px solid #dfe4ef;
 	@media only screen and (max-width: 425px) {
 		min-height: auto;
 		margin-bottom: 1em;
