@@ -6,6 +6,7 @@ import {
 } from '../../styles/Projects';
 import { TableHeader, TableRow } from '../../styles/Content';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function ProjectsContent() {
 	return (
@@ -19,6 +20,8 @@ export default function ProjectsContent() {
 
 const Item = () => {
 	const [open, setOpen] = useState(false);
+	const router = useRouter();
+
 	return (
 		<React.Fragment>
 			<Project open={open} onClick={() => setOpen(!open)}>
@@ -54,7 +57,10 @@ const Item = () => {
 						<span>Bugs</span>
 						<span>Score</span>
 					</TableHeader>
-					<TableRow span="25% 25% 15% 10% 10% 10% auto">
+					<TableRow
+						span="25% 25% 15% 10% 10% 10% auto"
+						onClick={() => router.push('/dashboard/application/12345')}
+					>
 						<span>Sappi XYZ</span>
 						<span>sappi.xyz</span>
 						<span>Testing</span>

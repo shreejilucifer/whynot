@@ -9,8 +9,8 @@ export default function BreadCrumb({ nav }) {
 		<BreadCrumbContainer>
 			{str &&
 				str.map((link, i) => (
-					<React.Fragment>
-						<span key={i}>{link}</span>
+					<React.Fragment key={i}>
+						<span>{link}</span>
 						{i !== str.length - 1 ? <span>{'>'}</span> : null}
 					</React.Fragment>
 				))}

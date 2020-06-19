@@ -112,6 +112,9 @@ export const LegendContainer = styled.div`
 			width: 1em;
 			margin-right: 1em;
 		}
+		& > p {
+			font-family: ${(props) => props.theme.fonts.primary};
+		}
 	}
 
 	& > span:nth-child(1) {
