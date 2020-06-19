@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
 	margin-top: 1.5em;
@@ -67,5 +67,40 @@ export const Stat = styled.div`
 				cursor: pointer;
 			}
 		}
+	}
+`;
+
+export const ErrorItem = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: ${(props) => props.color};
+	height: 6em;
+	& > span:first-child {
+		${(props) =>
+			props.dark
+				? css`
+						color: ${(props) => props.theme.colors.primary};
+				  `
+				: css`
+						color: ${(props) => props.theme.colors.white};
+				  `} 
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 2.5rem;
+	}
+
+	& > span:last-child {
+		margin-top: 0.5em;
+		${(props) =>
+			props.dark
+				? css`
+						color: ${(props) => props.theme.colors.primary};
+				  `
+				: css`
+						color: ${(props) => props.theme.colors.white};
+				  `} 
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 1.2rem;
 	}
 `;

@@ -4,6 +4,7 @@ import { Grid } from '../../styles/Grid';
 import Catalog from './Catalog';
 import VulnerabilityClassification from './VulnerabilityClassification';
 import OWASPIndicators from './OWASPIndicators';
+import ErrorSpec from './ErrorSpec';
 
 const Name = 'sappi xyz';
 
@@ -49,6 +50,7 @@ export default function Application() {
 						</p>
 					</Stat>
 				</Grid>
+				<ErrorSpec />
 				<Grid span="33.33% 33.33% 33.33%">
 					<Catalog />
 					<VulnerabilityClassification />
