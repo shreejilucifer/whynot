@@ -92,3 +92,47 @@ export const Errors = styled.div`
 	font-family: ${(props) => props.theme.fonts.primary};
 	color: ${(props) => props.theme.colors.danger};
 `;
+
+export const SuccessContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	padding-left: 10%;
+	padding-right: 10%;
+
+	& > img {
+		height: 5em;
+		margin-bottom: 1.5em;
+	}
+
+	& > p {
+		font-family: ${(props) => props.theme.fonts.primary};
+		text-align: center;
+		margin-bottom: 1.5em;
+	}
+
+	& > div {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+`;
+
+export const SuccessBtn = styled.button`
+	&:first-child {
+		margin-right: 1.5em;
+		background-color: ${(props) => props.theme.colors.secondary};
+		color: white;
+	}
+	font-family: ${(props) => props.theme.fonts.primary};
+	font-size: 1.5rem;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border: none;
+	border-radius: 0.2em;
+	&:hover {
+		cursor: pointer;
+	}
+`;
