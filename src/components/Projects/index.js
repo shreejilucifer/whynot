@@ -76,7 +76,9 @@ const Item = () => {
 						<span>8</span>
 						<span>9/10</span>
 					</TableRow>
-					<NewAppBtn>
+					<NewAppBtn
+						onClick={() => router.push(`/dashboard/create-application/1234`)}
+					>
 						<span>+</span>
 						<span>Add New Application</span>
 					</NewAppBtn>
