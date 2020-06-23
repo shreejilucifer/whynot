@@ -11,6 +11,18 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		color: #48486e;
 	}
+
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	body::-webkit-scrollbar-track {
+		display: none;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		display: none;
+	}
 `;
 
 const theme = {
@@ -21,6 +33,7 @@ const theme = {
 		secondary: '#34b3d3',
 		danger: '#f24747',
 		background: '#f2f4f8',
+		tertiary: '#f6416c',
 	},
 	fonts: {
 		primary: `'Roboto', sans-serif`,
