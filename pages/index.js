@@ -4,6 +4,9 @@ import {
 	HeroContainer,
 	HeroContent,
 	HeroObject,
+	FeatureContainer,
+	FeatureContent,
+	FeatureObject,
 } from '../src/styles/Landing/index-page';
 
 import { useRouter } from 'next/router';
@@ -29,12 +32,16 @@ export default function IndexPage() {
 					<img src="/img/landing/hero-object.svg" alt="Why Not" />
 				</HeroObject>
 			</HeroContainer>
-			<div>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt
-				mollitia illum ab corporis ducimus ipsum soluta! Facere earum nemo
-				consequatur assumenda libero laborum, dolorum atque nesciunt! Itaque
-				officiis quia recusandae.
-			</div>
+			<FeatureContainer>
+				<FeatureContent>
+					<span>Feature 1</span>
+					<span>Feature 2</span>
+					<span>Feature 3</span>
+				</FeatureContent>
+				<FeatureObject>
+					<img src="/img/landing/feature1.svg" alt="Features" />
+				</FeatureObject>
+			</FeatureContainer>
 		</Page>
 	);
 }

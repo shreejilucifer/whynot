@@ -90,3 +90,49 @@ export const HeroObject = styled.div`
 		max-width: 41em;
 	}
 `;
+
+export const FeatureContainer = styled.div`
+	display: grid;
+	grid-template-columns: 50% 50%;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-top: 10em;
+`;
+
+export const FeatureContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	& > span {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		font-size: 3em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		border-radius: 0.2em;
+		color: ${(props) => props.theme.colors.white};
+		background-color: ${(props) => props.theme.colors.secondary};
+		font-family: ${(props) => props.theme.fonts.primary};
+		&:hover {
+			cursor: pointer;
+			-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 50px 5px;
+			-moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 50px 5px;
+			transform: translateY(-0.1em);
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 50px 5px;
+			background-color: ${(props) => props.theme.colors.primary};
+		}
+	}
+`;
+
+export const FeatureObject = styled.div`
+	align-self: center;
+	& > img {
+		width: 100%;
+		max-width: 41em;
+		height: 30em;
+	}
+`;
