@@ -1,5 +1,5 @@
 import { Grid } from '../../styles/Grid';
-import MostVulnerableApplication from './MostVulnerableApplication';
+import MostRecentAssignmentTestSummary from './MostRecentAssignmentTestSummary';
 import Catalog from './Catalog';
 import LeastVulnerableApplication from './LeastVulnerableApplication';
 import TestsInProgress from './TestsInProgress';
@@ -12,7 +12,7 @@ export default function HomeGrid() {
 	return (
 		<React.Fragment>
 			<Grid span="70% 30%">
-				<MostVulnerableApplication />
+				<MostRecentAssignmentTestSummary />
 				<Catalog />
 			</Grid>
 			<Grid span="25% 50% 25%">

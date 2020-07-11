@@ -17,7 +17,7 @@ export default function Statistics() {
 				</Icon>
 				<Data>
 					<Numbers>4</Numbers>
-					<Legend>Projects</Legend>
+					<Legend>Applications</Legend>
 				</Data>
 			</Item>
 			<Item>
@@ -25,8 +25,8 @@ export default function Statistics() {
 					<img src="/img/applications.svg" />
 				</Icon>
 				<Data>
-					<Numbers>3</Numbers>
-					<Legend>Applications</Legend>
+					<Numbers>2</Numbers>
+					<Legend>Work In Progress</Legend>
 				</Data>
 			</Item>
 			<Item>
@@ -34,10 +34,8 @@ export default function Statistics() {
 					<img src="/img/tests.svg" />
 				</Icon>
 				<Data>
-					<Numbers>
-						1 <span>/1</span>
-					</Numbers>
-					<Legend>Tests/Billing Month</Legend>
+					<Numbers>36</Numbers>
+					<Legend>Reports</Legend>
 				</Data>
 			</Item>
 			<Item>

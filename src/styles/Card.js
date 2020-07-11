@@ -7,6 +7,10 @@ export const CardLayout = styled.div`
 	border-radius: 0.2em;
 	min-height: 20em;
 	border: 1px solid #dfe4ef;
+
+	&:hover {
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+	}
 	@media only screen and (max-width: 425px) {
 		min-height: auto;
 		margin-bottom: 1em;

@@ -11,7 +11,7 @@ export const Navbar = () => {
 			<NavContainer>
 				<Section>
 					<NavbarBrand>
-						<img src="/img/landing/logo.svg" alt="WhyNot53" />
+						<img src="/img/landing/logo.png" alt="WhyNot53" />
 					</NavbarBrand>
 					<Route>
 						Product <img src="/img/down-arrow.svg" alt="Caret" />

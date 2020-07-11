@@ -24,7 +24,7 @@ export default function Navbar() {
 				</Logo>
 				<Routes>
 					<Item path="/dashboard/home" title="Home" />
-					<Item path="/dashboard/projects" title="Projects" />
+					<Item path="/dashboard/projects" title="Assignments" />
 				</Routes>
 			</Brand>
 			<Options>

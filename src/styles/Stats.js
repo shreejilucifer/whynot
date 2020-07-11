@@ -2,11 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	background-color: ${(props) => props.theme.colors.white};
-	border-radius: 0.2em;
-	border: 1px solid #dfe4ef;
+	border-radius: 3px;
+
 	display: flex;
 	flex-direction: row;
 
+	&:hover {
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+	}
 	@media only screen and (max-width: 425px) {
 		flex-wrap: wrap;
 	}
@@ -85,7 +88,7 @@ export const Button = styled.button`
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	border-radius: 0.2em;
+	border-radius: 3px;
 	background-color: ${(props) => props.theme.colors.secondary};
 	color: ${(props) => props.theme.colors.white};
 	border: none;
@@ -102,6 +105,7 @@ export const Button = styled.button`
 	}
 	&:hover {
 		cursor: pointer;
+		background-color: ${(props) => props.theme.colors.darkorange};
 	}
 
 	@media only screen and (max-width: 425px) {

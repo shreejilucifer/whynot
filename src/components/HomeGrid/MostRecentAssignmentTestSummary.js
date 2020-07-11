@@ -1,9 +1,9 @@
 import Card from '../Card';
 import { Table, TableHeader, TableRow } from '../../styles/Content';
 
-export default function MostVulnerableApplication() {
+export default function MostRecentAssignmentTestSummary() {
 	return (
-		<Card title="Most Vulnerable Application">
+		<Card title="Most Recent Assignment Test Summary">
 			<Table>
 				<TableHeader span="20% 15% 10% 10% 10% 10% 10% 15%">
 					<span>Application</span>
