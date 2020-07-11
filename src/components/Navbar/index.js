@@ -20,7 +20,7 @@ export default function Navbar() {
 		<Container>
 			<Brand>
 				<Logo>
-					<img />
+					<img src="/img/landing/logo.svg" alt="WhyNot53" />
 				</Logo>
 				<Routes>
 					<Item path="/dashboard/home" title="Home" />
