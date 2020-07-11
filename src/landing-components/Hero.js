@@ -158,7 +158,7 @@ export const Hero = () => {
 			<HeroContainer>
 				<Title>You are at the center of Security</Title>
 				<SubTitle>
-					WhyNot53 is a group of security researchers who have been working with
+					Whynot53 is a group of security researchers who have been working with
 					many businesses of different industries and of different sizes across
 					the world by providing exceptional security services.
 				</SubTitle>
@@ -173,7 +173,7 @@ export const Hero = () => {
 					</FormSubTitle>
 				</FormContainer>
 				<CompaniesTitle>
-					WhyNot53 researchers have reported <span>8,300+ vulnerabilities</span>{' '}
+					Whynot53 researchers have reported <span>8,300+ vulnerabilities</span>{' '}
 					across <span>2000+ companies</span> and counting.
 				</CompaniesTitle>
 				<CompanyGrid>
