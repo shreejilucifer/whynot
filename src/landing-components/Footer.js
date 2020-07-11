@@ -183,7 +183,7 @@ export const Footer = () => {
 						<Route link="/careers" text="Careers" />
 					</List>
 					<List>
-						<Item title="true">Company</Item>
+						<Item title="true">Support</Item>
 						<Item>
 							<Link href="/system-status">
 								<a>
