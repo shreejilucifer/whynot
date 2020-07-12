@@ -1,15 +1,8 @@
-import styled from 'styled-components';
+import { useState } from 'react';
+import styled, { css } from 'styled-components';
 import { InputContainer } from './Hero';
 import { Container } from './CommonStyles';
-import { PieChart, Pie, Cell } from 'recharts';
 import Link from 'next/link';
-
-const data = [
-	{ name: 'New', value: 8 },
-	{ name: 'Reopened', value: 5 },
-	{ name: 'Not Fixed', value: 0 },
-	{ name: 'Fixed', value: 0 },
-];
 
 const COLORS = ['#FF5722', '#808080'];
 
@@ -49,7 +42,13 @@ export const RingGrid = styled.div`
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
+		&:hover {
+			cursor: pointer;
 
+			& > div {
+				border: 4px solid ${(props) => props.theme.colors.darkorange};
+			}
+		}
 		@media only screen and (max-width: 768px) {
 			display: grid;
 			grid-template-columns: 20% 80%;
@@ -73,6 +72,24 @@ export const RingGrid = styled.div`
 			}
 		}
 	}
+`;
+
+export const Radio = styled.div`
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	border: 2px solid ${(props) => props.theme.colors.orange};
+
+	&:hover {
+		cursor: pointer;
+		border: 4px solid ${(props) => props.theme.colors.darkorange};
+	}
+
+	${(props) =>
+		props.checked === 'checked' &&
+		css`
+			background-color: ${(props) => props.theme.colors.orange};
+		`}
 `;
 
 export const StatsContainer = styled.div`
@@ -165,16 +182,56 @@ export const Terms = styled.p`
 `;
 
 export const SiteStats = () => {
+	const [services, setServices] = useState([]);
+
+	const onClickService = (service) => {
+		if (isChecked(service)) {
+			let temp = services;
+			temp = temp.filter((x) => x !== service);
+			setServices(temp);
+		} else {
+			setServices([...services, service]);
+		}
+	};
+
+	const isChecked = (service) => {
+		return services.includes(service);
+	};
+
 	return (
 		<SiteStatsWrapper>
 			<SiteStatsContainer>
 				<RingGrid>
-					<Ring text="Bug Bounty" />
-					<Ring text="Web App VAP" />
-					<Ring text="Mobile App VA" />
-					<Ring text="Network Security" />
-					<Ring text="Cloud Security" />
-					<Ring text="Source Code" />
+					<Ring
+						text="Bug Bounty"
+						onClick={() => onClickService('Bug Bounty')}
+						checked={isChecked('Bug Bounty')}
+					/>
+					<Ring
+						text="Web App VAP"
+						onClick={() => onClickService('Web App VAP')}
+						checked={isChecked('Web App VAP')}
+					/>
+					<Ring
+						text="Mobile App VA"
+						onClick={() => onClickService('Mobile App VA')}
+						checked={isChecked('Mobile App VA')}
+					/>
+					<Ring
+						text="Network Security"
+						onClick={() => onClickService('Network Security')}
+						checked={isChecked('Network Security')}
+					/>
+					<Ring
+						text="Cloud Security"
+						onClick={() => onClickService('Cloud Security')}
+						checked={isChecked('Cloud Security')}
+					/>
+					<Ring
+						text="Source Code"
+						onClick={() => onClickService('Source Code')}
+						checked={isChecked('Source Code')}
+					/>
 				</RingGrid>
 				<StatsContainer>
 					<Item
@@ -229,24 +286,9 @@ export const Item = ({ text, options }) => {
 	);
 };
 
-export const Ring = ({ text }) => (
-	<div>
-		<PieChart width={40} height={40}>
-			<Pie
-				data={data}
-				cx={15}
-				cy={15}
-				innerRadius={12}
-				outerRadius={20}
-				fill="#FF5722"
-				paddingAngle={0}
-				dataKey="value"
-			>
-				{data.map((entry, index) => (
-					<Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-				))}
-			</Pie>
-		</PieChart>
+export const Ring = ({ text, onClick, checked }) => (
+	<div onClick={onClick}>
+		<Radio checked={checked ? 'checked' : 'unchecked'} />
 		<span>{text}</span>
 	</div>
 );

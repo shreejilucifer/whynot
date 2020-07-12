@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Container } from './CommonStyles';
+import { useRouter } from 'next/router';
+import { Formik } from 'formik';
 
 export const HeroSection = styled.div`
 	background-color: #fafbfb;
@@ -34,7 +36,7 @@ export const SubTitle = styled.h4`
 	line-height: 30px;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
 	width: 80%;
 	background-color: ${(props) => props.theme.colors.white};
 	box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
@@ -153,6 +155,21 @@ export const CompanyGrid = styled.div`
 `;
 
 export const Hero = () => {
+	const router = useRouter();
+
+	const validation = (values) => {
+		const errors = {};
+		if (!values.url) {
+			errors.url = 'URL Required';
+		}
+
+		return errors;
+	};
+
+	const submitForm = (values, { setSubmitting, resetForm }) => {
+		router.push(`/site/${values.url}`);
+	};
+
 	return (
 		<HeroSection>
 			<HeroContainer>
@@ -162,16 +179,45 @@ export const Hero = () => {
 					many businesses of different industries and of different sizes across
 					the world by providing exceptional security services.
 				</SubTitle>
-				<FormContainer>
-					<InputContainer>
-						<input type="text" placeholder="company.com" />
-						<button type="submit">Get Started</button>
-					</InputContainer>
-					<FormSubTitle>
-						Enter your domain name/URL to launch the security search. For
-						example, whynot53.com
-					</FormSubTitle>
-				</FormContainer>
+				<Formik
+					initialValues={{ url: '' }}
+					validate={validation}
+					onSubmit={submitForm}
+				>
+					{({
+						values,
+						errors,
+						touched,
+						handleChange,
+						handleBlur,
+						handleSubmit,
+						isSubmitting,
+					}) => (
+						<FormContainer onSubmit={handleSubmit}>
+							<InputContainer>
+								<input
+									type="text"
+									placeholder="company.com"
+									name="url"
+									onChange={handleChange}
+									onBlur={handleBlur}
+									value={values.url}
+								/>
+								<button type="submit" disabled={isSubmitting}>
+									Get Started
+								</button>
+							</InputContainer>
+							<div style={{ color: 'red', fontSize: '10px' }}>
+								{errors.url && touched.url && errors.url}
+							</div>
+							<FormSubTitle>
+								Enter your domain name/URL to launch the security search. For
+								example, whynot53.com
+							</FormSubTitle>
+						</FormContainer>
+					)}
+				</Formik>
+
 				<CompaniesTitle>
 					Whynot53 researchers have reported <span>8,300+ vulnerabilities</span>{' '}
 					across <span>2000+ companies</span> and counting.
