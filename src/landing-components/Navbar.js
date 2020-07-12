@@ -11,7 +11,11 @@ export const Navbar = () => {
 			<NavContainer>
 				<Section>
 					<NavbarBrand>
-						<img src="/img/landing/logo.png" alt="WhyNot53" />
+						<Link href="/">
+							<a>
+								<img src="/img/landing/logo.png" alt="WhyNot53" />
+							</a>
+						</Link>
 					</NavbarBrand>
 					<Route>
 						Product <img src="/img/down-arrow.svg" alt="Caret" />
@@ -141,7 +145,7 @@ export const NavbarBrand = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	& > img {
+	& img {
 		height: 30px;
 	}
 `;
@@ -189,7 +193,7 @@ export const Button = styled.div`
 	margin-left: 25px;
 	padding: 10px 20px 10px 20px;
 	background-color: ${(props) => props.theme.colors.orange};
-	border-radius: 5px;
+	border-radius: 3px;
 	font-size: 15px;
 	&:hover {
 		cursor: pointer;
