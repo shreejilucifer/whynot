@@ -23,11 +23,25 @@ export const Title = styled.div`
 	padding-right: 2%;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
 	font-size: 1.2rem;
 	font-family: ${(props) => props.theme.fonts.primary};
 	border-bottom: 1px solid #dfe4ef;
+`;
+
+export const Icon = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-left: 10px;
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+
+	& img {
+		height: 2em;
+		transform: translateX(-5%) translateY(7%);
+	}
 `;
 
 export const Content = styled.div`

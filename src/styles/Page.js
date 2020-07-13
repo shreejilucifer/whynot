@@ -8,6 +8,7 @@ export const Layout = styled.div`
 
 export const Content = styled.div`
 	max-width: 1440px;
+	min-height: 650px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 5%;

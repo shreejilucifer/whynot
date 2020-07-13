@@ -7,13 +7,16 @@ import {
 	Legend,
 	Button,
 } from '../../styles/Stats';
+import { useRouter } from 'next/router';
 
 export default function Statistics() {
+	const router = useRouter();
+
 	return (
 		<Container>
 			<Item>
 				<Icon>
-					<img src="/img/projects.svg" />
+					<img src="/img/mobile-app.svg" />
 				</Icon>
 				<Data>
 					<Numbers>4</Numbers>
@@ -22,7 +25,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/applications.svg" />
+					<img src="/img/collaborate.svg" />
 				</Icon>
 				<Data>
 					<Numbers>2</Numbers>
@@ -31,7 +34,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/tests.svg" />
+					<img src="/img/analysis.svg" />
 				</Icon>
 				<Data>
 					<Numbers>36</Numbers>
@@ -40,7 +43,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/vulnerabilities.svg" />
+					<img src="/img/bug.svg" />
 				</Icon>
 				<Data>
 					<Numbers>8</Numbers>
@@ -48,9 +51,11 @@ export default function Statistics() {
 				</Data>
 			</Item>
 			<Item>
-				<Button>
+				<Button
+					onClick={() => router.push('/dashboard/create-application/new')}
+				>
 					<span>
-						<img src="/img/applications.svg" />
+						<img src="/img/plus.svg" />
 					</span>
 					<span>New Application</span>
 				</Button>

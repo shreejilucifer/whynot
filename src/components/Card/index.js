@@ -1,9 +1,12 @@
-import { CardLayout, Title, Content } from '../../styles/Card';
+import { CardLayout, Title, Icon, Content } from '../../styles/Card';
 
-export default function Card({ title, children }) {
+export default function Card({ title, icon, children }) {
 	return (
 		<CardLayout>
-			<Title>{title}</Title>
+			<Title>
+				<span>{title}</span>
+				<Icon>{icon}</Icon>
+			</Title>
 			<Content>{children}</Content>
 		</CardLayout>
 	);

@@ -1,13 +1,20 @@
 import styled, { css } from 'styled-components';
 
+export const Nav = styled.div`
+	width: 100%;
+	border-bottom: 1px solid #d9dbde;
+	background-color: ${(props) => props.theme.colors.white};
+`;
+
 export const Container = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	height: 85px;
-	border-bottom: 1px solid #d9dbde;
-	background-color: ${(props) => props.theme.colors.white};
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 5%;
 	padding-right: 5%;
 
@@ -35,14 +42,12 @@ export const Brand = styled.div`
 export const Logo = styled.div`
 	width: 10em;
 	height: 100%;
-	margin-right: 2em;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	& > img {
-		width: 100%;
-		height: 90%;
+		height: 40px;
 	}
 `;
 

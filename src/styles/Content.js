@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Table = styled.div`
 	display: flex;
 	flex-direction: column;
+	max-height: 20em;
+	overflow-y: auto;
 `;
 
 export const TableHeader = styled.div`
@@ -14,33 +16,34 @@ export const TableHeader = styled.div`
 	& > span {
 		display: flex;
 		flex-direction: row;
-		padding-left: 5%;
+		justify-content: center;
 		align-items: center;
 		font-family: ${(props) => props.theme.fonts.primary};
 	}
 `;
 
 export const TableRow = styled.div`
+	margin-bottom: 0.5em;
 	display: grid;
 	grid-template-columns: ${(props) => props.span};
 	border-bottom: 1px solid #f2f4f8;
 	& > span {
-		padding-left: 5%;
-		padding-bottom: 1em;
-		padding-top: 1em;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
 		justify-content: center;
 		font-family: ${(props) => props.theme.fonts.primary};
+		padding-bottom: 0.2em;
 		font-size: 0.95rem;
-
+		& > p {
+			font-size: 0.8rem;
+		}
 		& > button {
-			width: 100%;
-			height: 100%;
+			width: 90%;
+			height: 50%;
 			border: none;
 			border-radius: 0.2em;
-			background-color: ${(props) => props.theme.colors.danger};
+			background-color: ${(props) => props.theme.colors.orange};
 			color: ${(props) => props.theme.colors.white};
 			font-family: ${(props) => props.theme.fonts.primary};
 		}

@@ -6,9 +6,9 @@ export default function Footer() {
 		<Container>
 			<div>
 				<Logo>
-					<img />
+					<img src="/img/landing/logo.png" alt="Whynot53" />
 				</Logo>
-				<Copyright>&copy; Whynot. All rights reserved.</Copyright>
+				<Copyright>&copy; Whynot53. All rights reserved.</Copyright>
 			</div>
 
 			<Links>
