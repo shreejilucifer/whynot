@@ -1,6 +1,6 @@
-import { Navbar } from '../src/landing-components/Navbar';
-import { Pricing } from '../src/landing-components/Pricing';
-import { Footer } from '../src/landing-components/Footer';
+import { Navbar } from '@/landing/Navbar';
+import { Pricing } from '@/landing/Pricing';
+import { Footer } from '@/landing/Footer';
 
 export default function PricingPage() {
 	return (

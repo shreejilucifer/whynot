@@ -1,4 +1,3 @@
-import BreadCrumb from '../TitleHeader/BreadCrumb';
 import { Container, Stat } from '../../styles/Application';
 import { Grid } from '../../styles/Grid';
 import Catalog from './Catalog';
@@ -11,7 +10,6 @@ const Name = 'sappi xyz';
 export default function Application() {
 	return (
 		<React.Fragment>
-			<BreadCrumb nav={`Home>Projects>${Name}`} />
 			<Container>
 				<Grid
 					span="25% 25% 23% 23% auto"

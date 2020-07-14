@@ -1,8 +1,7 @@
-import Page from '../../src/components/Page';
-
-import PendingApproval from '../../src/components/PendingApproval';
-import CancelledAssignments from '../../src/components/CancelledAssignments';
-import CreateAssignment from '../../src/components/CreateAssignment';
+import Page from '@/components/Page';
+import PendingApproval from '@/components/PendingApproval';
+import CancelledAssignments from '@/components/CancelledAssignments';
+import CreateAssignment from '@/components/CreateAssignment';
 
 export default function CreateAssignmentPage() {
 	return (

@@ -1,7 +1,7 @@
-import { Navbar } from '../src/landing-components/Navbar';
-import { Hero } from '../src/landing-components/Hero';
-import { Quote } from '../src/landing-components/Quote';
-import { Footer } from '../src/landing-components/Footer';
+import { Navbar } from '@/landing/Navbar';
+import { Hero } from '@/landing/Hero';
+import { Quote } from '@/landing/Quote';
+import { Footer } from '@/landing/Footer';
 
 export default function IndexPage() {
 	return (

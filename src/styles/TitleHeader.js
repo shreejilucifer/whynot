@@ -43,8 +43,12 @@ export const NewProjectBtn = styled.button`
 		cursor: pointer;
 	}
 	& > span {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		& > img {
-			height: 2em;
+			height: 1.2em;
 		}
 		font-family: ${(props) => props.theme.fonts.primary};
 		color: ${(props) => props.theme.colors.white};

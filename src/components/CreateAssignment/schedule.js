@@ -6,11 +6,12 @@ import {
 	Errors,
 	SuccessContainer,
 	SuccessBtn,
+	TimeContainer,
 } from '../../styles/Forms';
 
 const colSpan = '20% 12% 10% 12% 10% 10% 18% auto';
 
-export default function Schedule() {
+export default function Schedule(props) {
 	return (
 		<React.Fragment>
 			<React.Fragment>
@@ -38,23 +39,21 @@ export default function Schedule() {
 						noofDays={6}
 					/>
 				</Table>
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'row',
-						justifyContent: 'center',
-					}}
-				>
+				<TimeContainer>
 					<input type="datetime-local" />
 					<p>to</p>
 					<input type="datetime-local" />
-				</div>
+					<select>
+						<option value="">Time Zone</option>
+						<option value="GMT +530">GMT +5:30</option>
+					</select>
+				</TimeContainer>
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
 					<Button style={{ marginLeft: '0px' }} active={false}>
-						Move to Pending
+						Skip
 					</Button>
 					<Button type="submit" active={true} onClick={() => props.onSubmit()}>
-						Approve
+						Schedule
 					</Button>
 				</div>
 			</React.Fragment>

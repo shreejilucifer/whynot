@@ -1,6 +1,6 @@
-import { Navbar } from '../src/landing-components/Navbar';
+import { Navbar } from '@/landing/Navbar';
 
-import { Footer } from '../src/landing-components/Footer';
+import { Footer } from '@/landing/Footer';
 import Link from 'next/link';
 
 export default function SignInPage() {

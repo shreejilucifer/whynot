@@ -7,18 +7,21 @@ export default function TitleHeader() {
 	const router = useRouter();
 	return (
 		<div>
-			<Grid span="90% 10%">
-				<BreadCrumb nav="Home>Applications" />
-			</Grid>
 			<Grid span="80% 20%">
 				<Title>All Projects & Applications</Title>
-				<NewProjectBtn onClick={() => router.push('/dashboard/create-project')}>
+				<NewProjectBtn onClick={() => router.push('/dashboard/add-assignment')}>
 					<span>
-						<img src="/img/newproject.svg" />
+						<img src="/img/plus.svg" />
 					</span>
-					<span>New Project</span>
+					<span>New Assignment</span>
 				</NewProjectBtn>
 			</Grid>
 		</div>
 	);
 }
+
+/*
+<Grid span="90% 10%">
+				<BreadCrumb nav="Home>Applications" />
+			</Grid>
+*/

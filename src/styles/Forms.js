@@ -156,3 +156,30 @@ export const SuccessBtn = styled.button`
 		cursor: pointer;
 	}
 `;
+
+export const TimeContainer = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	& > input,
+	& > select {
+		padding: 5px;
+		border-radius: 3px;
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 18px;
+		border: 1px solid ${(props) => props.theme.colors.orange};
+	}
+	& > p {
+		margin-left: 2em;
+		margin-right: 2em;
+		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 18px;
+	}
+	& > select {
+		margin-left: 2em;
+		padding-right: 5%;
+	}
+`;

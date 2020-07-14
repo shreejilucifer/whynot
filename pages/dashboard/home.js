@@ -1,6 +1,6 @@
-import Page from '../../src/components/Page';
-import Statistics from '../../src/components/Statistics';
-import HomeGrid from '../../src/components/HomeGrid';
+import Page from '@/components/Page';
+import Statistics from '@/components/Statistics';
+import HomeGrid from '@/components/HomeGrid';
 
 export default function Home() {
 	return (
