@@ -40,7 +40,7 @@ export const TableRow = styled.div`
 		}
 		& > button {
 			width: 90%;
-			height: 50%;
+			height: 70%;
 			border: none;
 			border-radius: 0.2em;
 			background-color: ${(props) => props.theme.colors.orange};

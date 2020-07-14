@@ -13,8 +13,9 @@ export const Info = styled.div`
 	padding-left: 10%;
 	padding-right: 10%;
 	border-right: 1px solid #dfe4ef;
-	& > h1 {
+	& > h2 {
 		font-family: ${(props) => props.theme.fonts.primary};
+		font-weight: 600;
 	}
 
 	& > p {
@@ -26,6 +27,23 @@ export const Info = styled.div`
 		margin-top: 2em;
 		height: 10em;
 	}
+
+	& > button {
+		margin-top: 1em;
+		background-color: ${(props) => props.theme.colors.orange};
+		outline: none;
+		border-radius: 3px;
+		border: none;
+		font-family: ${(props) => props.theme.fonts.primary};
+		color: ${(props) => props.theme.colors.white};
+		font-size: 20px;
+		max-width: 30%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 `;
 
 export const FormContainer = styled.form`
@@ -36,14 +54,14 @@ export const FormContainer = styled.form`
 
 	& > span {
 		font-family: ${(props) => props.theme.fonts.primary};
-		font-size: 1.5rem;
+		font-size: 1rem;
 		margin-top: 1em;
 	}
 
 	& > input,
 	& > textarea {
 		margin-top: 0.5em;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		padding: 2%;
 		border-radius: 0.2em;
 		border: 1px solid #dfe4ef;
@@ -52,7 +70,9 @@ export const FormContainer = styled.form`
 	}
 
 	& > textarea {
-		height: 8em;
+		min-height: 8em;
+		min-width: 100%;
+		max-width: 100%;
 	}
 
 	& > div {
@@ -67,13 +87,13 @@ export const FormContainer = styled.form`
 export const Button = styled.button`
 	margin-left: 1.5em;
 	font-family: ${(props) => props.theme.fonts.primary};
-	font-size: 1.5rem;
+	font-size: 1rem;
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-top: 2%;
 	padding-bottom: 2%;
 	border: none;
-	border-radius: 0.2em;
+	border-radius: 3px;
 	&:hover {
 		cursor: pointer;
 	}

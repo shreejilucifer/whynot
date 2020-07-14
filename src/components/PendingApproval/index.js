@@ -5,48 +5,51 @@ const colSpan = '25% 10% 15% auto';
 
 export default function PendingApproval() {
 	return (
-		<Card title="Pending For Approval">
-			<Table>
-				<TableHeader span={colSpan}>
-					<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
-						Assignments
-					</span>
-					<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
-						Date Created
-					</span>
-					<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
-						Status
-					</span>
-					<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
-						Proposal
-					</span>
-				</TableHeader>
-				<Row
-					name="TouchBistro WebApp"
-					url="www.touchbistro.com"
-					dateCreated="13 June 2020"
-					status="Scope Discussion"
-				/>
-				<Row
-					name="TouchBistro WebApp"
-					url="www.touchbistro.com"
-					dateCreated="13 June 2020"
-					status="Price Negotiation"
-				/>
-				<Row
-					name="TouchBistro WebApp"
-					url="www.touchbistro.com"
-					dateCreated="13 June 2020"
-					status="Resource Planning"
-				/>
-				<Row
-					name="TouchBistro WebApp"
-					url="www.touchbistro.com"
-					dateCreated="13 June 2020"
-					status="Scope Discussion"
-				/>
-			</Table>
-		</Card>
+		<React.Fragment>
+			<br />
+			<Card title="Pending For Approval">
+				<Table>
+					<TableHeader span={colSpan}>
+						<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
+							Assignments
+						</span>
+						<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
+							Date Created
+						</span>
+						<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
+							Status
+						</span>
+						<span style={{ justifyContent: 'flex-start', paddingLeft: '10px' }}>
+							Proposal
+						</span>
+					</TableHeader>
+					<Row
+						name="TouchBistro WebApp"
+						url="www.touchbistro.com"
+						dateCreated="13 June 2020"
+						status="Scope Discussion"
+					/>
+					<Row
+						name="TouchBistro WebApp"
+						url="www.touchbistro.com"
+						dateCreated="13 June 2020"
+						status="Price Negotiation"
+					/>
+					<Row
+						name="TouchBistro WebApp"
+						url="www.touchbistro.com"
+						dateCreated="13 June 2020"
+						status="Resource Planning"
+					/>
+					<Row
+						name="TouchBistro WebApp"
+						url="www.touchbistro.com"
+						dateCreated="13 June 2020"
+						status="Scope Discussion"
+					/>
+				</Table>
+			</Card>
+		</React.Fragment>
 	);
 }
 
