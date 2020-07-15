@@ -1,5 +1,6 @@
 import App from 'next/app';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import 'react-step-progress-bar/styles.css';
 
 const GlobalStyle = createGlobalStyle`
     *, *::after, *::before {
