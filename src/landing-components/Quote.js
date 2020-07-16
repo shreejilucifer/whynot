@@ -6,24 +6,25 @@ export const QuoteContainer = styled(Container)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: ${(props) => props.theme.colors.black};
 	padding-top: 100px;
 	padding-bottom: 100px;
 `;
 
 export const QuoteTitle = styled.h2`
 	font-family: ${(props) => props.theme.fonts.landing};
+	color: ${(props) => props.theme.colors.primary};
 	font-weight: 500;
 	text-align: center;
 	font-size: 28px;
-	color: rgba(0, 0, 0, 1);
 `;
 
 export const QuoteSubtitle = styled.h3`
+	font-family: ${(props) => props.theme.fonts.landing};
+	color: ${(props) => props.theme.colors.primary};
 	margin-top: 18px;
 	width: 80%;
 	text-align: center;
-	color: rgba(0, 0, 0, 0.6);
+	opacity: 0.6;
 	font-weight: 400;
 	line-height: 30px;
 `;

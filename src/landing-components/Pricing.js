@@ -17,6 +17,7 @@ export const PricingContainer = styled(Container)`
 export const Title = styled.h1`
 	text-align: center;
 	font-family: ${(props) => props.theme.fonts.landing};
+	color: ${(props) => props.theme.colors.primary};
 	font-weight: 400;
 	font-size: 40px;
 `;
@@ -58,7 +59,7 @@ export const SwitchOption = styled.span`
 			background-color: ${(props) => props.theme.colors.white};
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 			border-radius: 20px;
-			color: rgba(0, 0, 0, 1);
+			color: ${(props) => props.theme.colors.primary};
 		`}
 
 	@media only screen and (max-width: 768px) {
@@ -116,6 +117,13 @@ export const Cell = styled.div`
 
 	& > p {
 		font-family: ${(props) => props.theme.fonts.landing};
+		color: ${(props) => props.theme.colors.primary};
+
+		${(props) =>
+			props.text === 'white' &&
+			css`
+				color: white;
+			`}
 		font-size: 13px;
 		text-align: center;
 
@@ -126,6 +134,7 @@ export const Cell = styled.div`
 
 	& > h4 {
 		font-family: ${(props) => props.theme.fonts.landing};
+		color: ${(props) => props.theme.colors.primary};
 		font-weight: 600;
 		@media only screen and (max-width: 768px) {
 			font-size: 12px;
@@ -146,6 +155,7 @@ export const AddOn = styled.div`
 	padding-bottom: 30px;
 	& > h3 {
 		font-family: ${(props) => props.theme.fonts.landing};
+		color: ${(props) => props.theme.colors.primary};
 		font-weight: 600;
 		font-size: 25px;
 
@@ -167,6 +177,7 @@ export const AddOn = styled.div`
 		}
 		& > p {
 			font-family: ${(props) => props.theme.fonts.landing};
+			color: ${(props) => props.theme.colors.primary};
 			margin-left: 10px;
 			font-size: 15px;
 			@media only screen and (max-width: 768px) {

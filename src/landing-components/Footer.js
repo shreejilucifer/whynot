@@ -3,7 +3,7 @@ import { Container } from './CommonStyles';
 import Link from 'next/link';
 
 export const FooterSection = styled.div`
-	background-color: #262626;
+	background-color: ${(props) => props.theme.colors.primary};
 	padding-top: 100px;
 `;
 

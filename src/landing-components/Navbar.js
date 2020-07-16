@@ -106,7 +106,7 @@ export const MenuDialog = styled.div`
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
-		color: ${(props) => props.theme.colors.black};
+		color: ${(props) => props.theme.colors.primary};
 		font-family: ${(props) => props.theme.fonts.landing};
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	}
@@ -154,20 +154,20 @@ export const Route = styled.div`
 	margin-left: 25px;
 	font-family: ${(props) => props.theme.fonts.landing};
 	text-decoration: none;
-	color: rgba(0, 0, 0, 0.5);
+	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.5;
+
 	&:hover {
-		color: ${(props) => props.theme.colors.black};
+		opacity: 1;
 	}
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	height: 100%;
 	font-size: 15px;
 	& a {
-		color: rgba(0, 0, 0, 0.5);
-		&:hover {
-			color: ${(props) => props.theme.colors.black};
-		}
+		color: ${(props) => props.theme.colors.primary};
 		text-decoration: none;
 	}
 	& img {

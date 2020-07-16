@@ -14,12 +14,13 @@ export const HeroContainer = styled(Container)`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	color: ${(props) => props.theme.colors.black};
+
 	padding-top: 190px;
 `;
 
 export const Title = styled.h1`
 	font-family: ${(props) => props.theme.fonts.landing};
+	color: ${(props) => props.theme.colors.primary};
 	font-weight: 500;
 	text-align: center;
 	font-size: 40px;
@@ -27,10 +28,11 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.h4`
 	font-family: ${(props) => props.theme.fonts.landing};
+	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.5;
 	text-align: center;
 	font-weight: 500;
 	margin-top: 15px;
-	color: #737373;
 	letter-spacing: 0;
 	width: 80%;
 	line-height: 30px;
@@ -60,9 +62,9 @@ export const InputContainer = styled.div`
 	width: 100%;
 
 	& > input {
-		border-left: 1px solid #ff916f;
-		border-top: 1px solid #ff916f;
-		border-bottom: 1px solid #ff916f;
+		border-left: 1px solid ${(props) => props.theme.colors.tertiary};
+		border-top: 1px solid ${(props) => props.theme.colors.tertiary};
+		border-bottom: 1px solid ${(props) => props.theme.colors.tertiary};
 		border-right: none;
 		border-radius: 3px 0 0 3px;
 		height: 50px;
@@ -74,7 +76,8 @@ export const InputContainer = styled.div`
 		font-weight: 400;
 
 		&::placeholder {
-			color: rgba(0, 0, 0, 0.3);
+			color: ${(props) => props.theme.colors.primary};
+			opacity: 0.3;
 		}
 	}
 	& > button {
@@ -112,7 +115,8 @@ export const InputContainer = styled.div`
 export const FormSubTitle = styled.p`
 	margin-top: 20px;
 	font-family: ${(props) => props.theme.fonts.landing};
-	color: #888;
+	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.5;
 	font-weight: 400;
 	font-size: 15px;
 `;
@@ -121,9 +125,9 @@ export const CompaniesTitle = styled.p`
 	text-align: center;
 	margin-top: 100px;
 	font-family: ${(props) => props.theme.fonts.landing};
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(72, 72, 110, 0.5);
 	& > span {
-		color: rgba(0, 0, 0, 0.8);
+		color: rgba(72, 72, 110, 1);
 	}
 `;
 
