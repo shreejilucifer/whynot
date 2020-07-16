@@ -66,6 +66,7 @@ export const RingGrid = styled.div`
 			text-align: center;
 			margin-left: 5px;
 			font-family: ${(props) => props.theme.fonts.landing};
+			font-size: 1rem;
 
 			@media only screen and (max-width: 768px) {
 				text-align: left;
@@ -105,19 +106,20 @@ export const InputGroup = styled.div`
 	flex-direction: row;
 	align-items: center;
 	&:last-child {
-		border-bottom: 1px solid ${(props) => props.theme.colors.orange};
+		border-bottom: 1px solid ${(props) => props.theme.colors.tertiary};
 	}
 	& > span {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		font-family: ${(props) => props.theme.fonts.landing};
+		color: ${(props) => props.theme.colors.primary};
 		width: 70%;
 		height: 100%;
 		padding-left: 10px;
-		font-size: 20px;
-		border-left: 1px solid ${(props) => props.theme.colors.orange};
-		border-top: 1px solid ${(props) => props.theme.colors.orange};
+		font-size: 1rem;
+		border-left: 1px solid ${(props) => props.theme.colors.tertiary};
+		border-top: 1px solid ${(props) => props.theme.colors.tertiary};
 
 		@media only screen and (max-width: 768px) {
 			font-size: 14px;
@@ -131,7 +133,7 @@ export const InputGroup = styled.div`
 		background-color: ${(props) => props.theme.colors.orange};
 		color: ${(props) => props.theme.colors.white};
 		border: none;
-		font-size: 20px;
+		font-size: 1rem;
 		outline: none;
 		padding-left: 2%;
 		-webkit-appearance: none;
@@ -162,17 +164,17 @@ export const MailContainer = styled.div`
 
 export const Label = styled.p`
 	font-family: ${(props) => props.theme.fonts.landing};
-	color: rgba(0, 0, 0, 0.5);
+	color: ${(props) => props.theme.colors.primary};
 	margin-bottom: 10px;
 `;
 
 export const Terms = styled.p`
 	font-family: ${(props) => props.theme.fonts.landing};
-	color: rgba(0, 0, 0, 0.5);
+	color: ${(props) => props.theme.colors.primary};
 	margin-top: 10px;
 
 	& > a {
-		color: rgba(0, 0, 0, 0.5);
+		color: ${(props) => props.theme.colors.primary};
 		text-decoration: none;
 
 		&:hover {

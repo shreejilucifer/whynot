@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Container } from './CommonStyles';
 
 export const HowItWorksContainer = styled(Container)`
-	margin-top: 20px;
-	padding-bottom: 40px;
+	margin-top: 50px;
+	padding-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 `;
@@ -11,10 +11,12 @@ export const HowItWorksContainer = styled(Container)`
 export const Title = styled.h1`
 	text-align: center;
 	font-family: ${(props) => props.theme.fonts.landing};
+	color: ${(props) => props.theme.colors.primary};
+	font-weight: 500;
 `;
 
 export const Video = styled.iframe`
-	margin-top: 20px;
+	margin-top: 50px;
 	height: 500px;
 	width: 100%;
 
