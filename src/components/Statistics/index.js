@@ -25,7 +25,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/collaborate.svg" />
+					<img src="/img/dashboard/workinprogress.png" />
 				</Icon>
 				<Data>
 					<Numbers>2</Numbers>
@@ -51,13 +51,11 @@ export default function Statistics() {
 				</Data>
 			</Item>
 			<Item>
-				<Button
-					onClick={() => router.push('/dashboard/create-application/new')}
-				>
+				<Button onClick={() => router.push('/dashboard/add-assignment')}>
 					<span>
 						<img src="/img/plus.svg" />
 					</span>
-					<span>New Application</span>
+					<span>New Assignment</span>
 				</Button>
 			</Item>
 		</Container>

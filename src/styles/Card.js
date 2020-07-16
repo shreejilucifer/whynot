@@ -25,8 +25,9 @@ export const Title = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-family: ${(props) => props.theme.fonts.primary};
+	color: ${(props) => props.theme.colors.primary};
 	border-bottom: 1px solid #dfe4ef;
 `;
 

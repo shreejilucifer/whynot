@@ -19,11 +19,14 @@ export const TableHeader = styled.div`
 		justify-content: center;
 		align-items: center;
 		font-family: ${(props) => props.theme.fonts.primary};
+		color: ${(props) => props.theme.colors.primary};
 	}
 `;
 
 export const TableRow = styled.div`
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	display: grid;
 	grid-template-columns: ${(props) => props.span};
 	border-bottom: 1px solid #f2f4f8;
@@ -33,6 +36,7 @@ export const TableRow = styled.div`
 		align-items: center;
 		justify-content: center;
 		font-family: ${(props) => props.theme.fonts.primary};
+		color: ${(props) => props.theme.colors.primary};
 		padding-bottom: 0.2em;
 		font-size: 0.95rem;
 		& > p {

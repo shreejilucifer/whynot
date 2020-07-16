@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 export const PricingContainer = styled(Container)`
 	padding-top: 120px;
+	padding-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -19,15 +20,15 @@ export const Title = styled.h1`
 	font-family: ${(props) => props.theme.fonts.landing};
 	color: ${(props) => props.theme.colors.primary};
 	font-weight: 400;
-	font-size: 40px;
+	font-size: 32px;
 `;
 
 export const SwitchContainer = styled.div`
-	margin-top: 30px;
+	margin-top: 50px;
 	width: 40%;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	padding: 5px;
+	padding: 2px;
 	border-radius: 30px;
 	background-color: ${(props) => props.theme.colors.gray};
 
@@ -68,6 +69,7 @@ export const SwitchOption = styled.span`
 `;
 
 export const Table = styled.div`
+	margin-top: 50px;
 	width: 100%;
 	@media only screen and (max-width: 425px) {
 		overflow-x: scroll;
@@ -151,12 +153,13 @@ export const Cell = styled.div`
 
 export const AddOn = styled.div`
 	width: 100%;
-	margin-top: 25px;
-	padding-bottom: 30px;
+	margin-top: 50px;
+
 	& > h3 {
 		font-family: ${(props) => props.theme.fonts.landing};
 		color: ${(props) => props.theme.colors.primary};
-		font-weight: 600;
+		margin-bottom: 50px;
+		font-weight: 500;
 		font-size: 25px;
 
 		@media only screen and (max-width: 768px) {
@@ -165,7 +168,7 @@ export const AddOn = styled.div`
 	}
 
 	& > span {
-		margin-top: 15px;
+		margin-bottom: 15px;
 		display: flex;
 		flex-direction: row;
 		align-items: center;

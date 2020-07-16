@@ -24,7 +24,6 @@ export const QuoteSubtitle = styled.h3`
 	margin-top: 18px;
 	width: 80%;
 	text-align: center;
-	opacity: 0.6;
 	font-weight: 400;
 	line-height: 30px;
 `;

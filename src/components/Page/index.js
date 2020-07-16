@@ -11,7 +11,6 @@ const Page = ({ title, children }) => {
 			</Head>
 			<Navbar />
 			<Content>{children}</Content>
-			<Footer />
 		</Layout>
 	);
 };

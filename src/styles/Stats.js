@@ -64,6 +64,7 @@ export const Data = styled.div`
 
 export const Numbers = styled.div`
 	font-family: ${(props) => props.theme.fonts.primary};
+	color: ${(props) => props.theme.colors.primary};
 	font-size: 3rem;
 
 	& > span {
@@ -73,6 +74,7 @@ export const Numbers = styled.div`
 
 export const Legend = styled.div`
 	font-family: ${(props) => props.theme.fonts.primary};
+	color: ${(props) => props.theme.colors.primary};
 	font-size: 0.8rem;
 `;
 
@@ -89,7 +91,7 @@ export const Button = styled.button`
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 3px;
-	background-color: ${(props) => props.theme.colors.secondary};
+	background-color: ${(props) => props.theme.colors.orange};
 	color: ${(props) => props.theme.colors.white};
 	border: none;
 	outline: none;
