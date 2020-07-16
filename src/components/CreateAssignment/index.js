@@ -6,7 +6,7 @@ import Schedule from './schedule';
 import GetAQuote from './getquote';
 import Completion from './completion';
 import { useRouter } from 'next/router';
-import Progress from './Progress';
+import Progress from './progress';
 
 export default function CreateAssignment() {
 	const [stage, setStage] = useState(0);
