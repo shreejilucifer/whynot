@@ -41,12 +41,6 @@ export default function PendingApproval() {
 						dateCreated="13 June 2020"
 						status="Resource Planning"
 					/>
-					<Row
-						name="TouchBistro WebApp"
-						url="www.touchbistro.com"
-						dateCreated="13 June 2020"
-						status="Scope Discussion"
-					/>
 				</Table>
 			</Card>
 		</React.Fragment>
@@ -78,18 +72,18 @@ export const Row = ({
 		<span
 			style={{
 				display: 'grid',
-				gridTemplateColumns: '16.66% 16.66% 16.66% 16.66% 16.66% 16.66%',
+				gridTemplateColumns: '16.66% 16.66% 16.66% 16.66% 33.32%',
 			}}
 		>
 			<img
-				src="/img/file-download.svg"
+				src="/img/dashboard/report.png"
 				alt="Download Proposal"
 				style={{ height: '40px', paddingLeft: '10px' }}
 			/>
 			<div>Details</div>
 			<div>Edit</div>
 			<div>Cancel</div>
-			<div>Discuss</div>
+
 			<button>Approve</button>
 		</span>
 	</TableRow>

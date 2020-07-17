@@ -13,7 +13,7 @@ export const Info = styled.div`
 	padding-left: 10%;
 	padding-right: 10%;
 	border-right: 1px solid #dfe4ef;
-	& > h2 {
+	& > h3 {
 		font-family: ${(props) => props.theme.fonts.primary};
 		font-weight: 600;
 	}
@@ -21,6 +21,7 @@ export const Info = styled.div`
 	& > p {
 		margin-top: 2em;
 		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 0.9rem;
 	}
 
 	& > img {
@@ -100,11 +101,16 @@ export const Button = styled.button`
 	${(props) =>
 		props.active
 			? css`
-					background-color: ${(props) => props.theme.colors.secondary};
+					background-color: ${(props) => props.theme.colors.orange};
 					color: ${(props) => props.theme.colors.white};
+
+					&:hover {
+						background-color: ${(props) => props.theme.colors.tertiary};
+					}
 			  `
 			: css`
-					background-color: #dfe4ef;
+					background-color: transparent;
+					border: 1px solid ${(props) => props.theme.colors.tertiary};
 			  `}
 `;
 

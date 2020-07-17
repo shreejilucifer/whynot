@@ -41,12 +41,6 @@ export default function CancelledAssignments() {
 						cancelledDate="13 June 2020"
 						reason="Resource Planning"
 					/>
-					<Row
-						name="TouchBistro WebApp"
-						url="www.touchbistro.com"
-						cancelledDate="13 June 2020"
-						reason="Scope Discussion"
-					/>
 				</Table>
 			</Card>
 		</React.Fragment>
@@ -78,17 +72,16 @@ export const Row = ({
 		<span
 			style={{
 				display: 'grid',
-				gridTemplateColumns: '25% 25% 25% 25%',
+				gridTemplateColumns: '25% 25% 50%',
 			}}
 		>
 			<img
-				src="/img/file-download.svg"
+				src="/img/dashboard/report.png"
 				alt="Download Proposal"
 				style={{ height: '40px', paddingLeft: '10px' }}
 			/>
 			<div>Details</div>
 
-			<button>Discuss</button>
 			<button>Approve</button>
 		</span>
 	</TableRow>

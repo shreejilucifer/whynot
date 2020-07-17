@@ -69,7 +69,7 @@ export const Route = styled.div`
 	&:hover {
 		cursor: pointer;
 		& a {
-			color: ${(props) => props.theme.colors.black};
+			color: ${(props) => props.theme.colors.primary};
 		}
 		border-bottom: 3px solid ${(props) => props.theme.colors.primary};
 	}
@@ -78,7 +78,7 @@ export const Route = styled.div`
 		props.active === true
 			? css`
 					& a {
-						color: ${(props) => props.theme.colors.black};
+						color: ${(props) => props.theme.colors.primary};
 					}
 					border-bottom: 3px solid ${(props) => props.theme.colors.primary};
 			  `
@@ -131,7 +131,7 @@ export const NotificationCount = styled.div`
 	align-items: center;
 	border-radius: 1em;
 	border: 1px solid ${(props) => props.theme.colors.white};
-	background-color: ${(props) => props.theme.colors.secondary};
+	background-color: ${(props) => props.theme.colors.orange};
 	color: ${(props) => props.theme.colors.white};
 	font-family: ${(props) => props.theme.fonts.primary};
 `;
@@ -160,7 +160,7 @@ export const ProfilePic = styled.img`
 export const Username = styled.div`
 	margin-left: 1.5em;
 	font-family: ${(props) => props.theme.fonts.primary};
-	color: ${(props) => props.theme.colors.secondary};
+	color: ${(props) => props.theme.colors.primary};
 `;
 
 export const Caret = styled.img`

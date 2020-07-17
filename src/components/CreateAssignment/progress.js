@@ -2,8 +2,8 @@ import { ProgressBar, Step } from 'react-step-progress-bar';
 import styled, { css } from 'styled-components';
 
 const Container = styled.div`
-	margin-top: 20px;
-	margin-bottom: 70px;
+	margin-top: 30px;
+	margin-bottom: 80px;
 	padding-left: 5%;
 	padding-right: 5%;
 `;
@@ -59,14 +59,14 @@ export default function Progress({ percent }) {
 	return (
 		<Container>
 			<ProgressBar
-				filledBackground="linear-gradient(to right, #ff5722, #ff4722)"
+				filledBackground="linear-gradient(to right, #34b3d3, #48486e)"
 				percent={percent}
 			>
 				<Step transition="skew">
 					{({ accomplished, index }) => (
 						<IconContainer active={accomplished}>
 							<div>
-								<img src="/img/play-button.svg" />
+								<img src="/img/dashboard/play-button.svg" />
 							</div>
 							<p>Start</p>
 						</IconContainer>
@@ -76,7 +76,7 @@ export default function Progress({ percent }) {
 					{({ accomplished, index }) => (
 						<IconContainer active={accomplished}>
 							<div>
-								<img src="/img/crosshair.svg" />
+								<img src="/img/dashboard/notepad.svg" />
 							</div>
 							<p>Define Scope</p>
 						</IconContainer>
@@ -86,7 +86,7 @@ export default function Progress({ percent }) {
 					{({ accomplished, index }) => (
 						<IconContainer active={accomplished}>
 							<div>
-								<img src="/img/invoice-1.svg" />
+								<img src="/img/dashboard/notepad-1.svg" />
 							</div>
 							<p>Get a Quote</p>
 						</IconContainer>
@@ -96,7 +96,7 @@ export default function Progress({ percent }) {
 					{({ accomplished, index }) => (
 						<IconContainer active={accomplished}>
 							<div>
-								<img src="/img/plus-1.svg" />
+								<img src="/img/dashboard/event.svg" />
 							</div>
 							<p>Schedule</p>
 						</IconContainer>
@@ -106,7 +106,7 @@ export default function Progress({ percent }) {
 					{({ accomplished, index }) => (
 						<IconContainer active={accomplished}>
 							<div>
-								<img src="/img/correct.svg" />
+								<img src="/img/dashboard/correct.svg" />
 							</div>
 							<p>Completion</p>
 						</IconContainer>

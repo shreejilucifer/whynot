@@ -7,7 +7,9 @@ export default function CreateAssignmentPage() {
 	return (
 		<Page title="Add Assignments">
 			<CreateAssignment />
+			<br />
 			<PendingApproval />
+			<br />
 			<CancelledAssignments />
 		</Page>
 	);

@@ -36,7 +36,7 @@ export default function Start(props) {
 	return (
 		<Grid span="50% 50%">
 			<Info>
-				<h2>Create an Assignment</h2>
+				<h3>Create an Assignment</h3>
 				<p>
 					Each assignment represents a URL. A group of applications is
 					collectively known as an assignment. Testing your applications and
