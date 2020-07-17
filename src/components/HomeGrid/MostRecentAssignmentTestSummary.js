@@ -91,7 +91,7 @@ export const Row = ({
 		<span>{medium}</span>
 		<span>{low}</span>
 		<span>
-			<img src="/img/file-download.svg" style={{ height: '40px' }} />
+			<img src="/img/dashboard/report.png" style={{ height: '40px' }} />
 		</span>
 		<span>
 			<p style={{ textAlign: 'center' }}>{status}</p>

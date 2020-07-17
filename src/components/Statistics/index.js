@@ -16,7 +16,7 @@ export default function Statistics() {
 		<Container>
 			<Item>
 				<Icon>
-					<img src="/img/mobile-app.svg" />
+					<img src="/img/dashboard/monitor.svg" />
 				</Icon>
 				<Data>
 					<Numbers>4</Numbers>
@@ -25,7 +25,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/dashboard/workinprogress.png" />
+					<img src="/img/dashboard/hourglass.svg" />
 				</Icon>
 				<Data>
 					<Numbers>2</Numbers>
@@ -34,7 +34,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/analysis.svg" />
+					<img src="/img/dashboard/report-stats.png" />
 				</Icon>
 				<Data>
 					<Numbers>36</Numbers>
@@ -43,7 +43,7 @@ export default function Statistics() {
 			</Item>
 			<Item>
 				<Icon>
-					<img src="/img/bug.svg" />
+					<img src="/img/dashboard/shield.svg" />
 				</Icon>
 				<Data>
 					<Numbers>8</Numbers>
