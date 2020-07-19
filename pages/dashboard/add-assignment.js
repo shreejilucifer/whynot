@@ -3,6 +3,8 @@ import PendingApproval from '@/components/PendingApproval';
 import CancelledAssignments from '@/components/CancelledAssignments';
 import CreateAssignment from '@/components/CreateAssignment';
 import { useEffect } from 'react';
+import CompletedAssignments from '@/components/HomeGrid/CompletedAssignments';
+import OngoingAssignments from '@/components/HomeGrid/OngoingAssignments';
 
 export default function CreateAssignmentPage() {
 	useEffect(() => {
@@ -16,6 +18,10 @@ export default function CreateAssignmentPage() {
 			<CreateAssignment />
 			<br />
 			<PendingApproval />
+			<br />
+			<CompletedAssignments />
+			<br />
+			<OngoingAssignments />
 			<br />
 			<CancelledAssignments />
 		</Page>

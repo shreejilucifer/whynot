@@ -24,9 +24,14 @@ export default function Navbar() {
 		<Nav>
 			<Container>
 				<Brand>
-					<Logo>
-						<img src="/img/landing/logo.png" alt="Whynot53" />
-					</Logo>
+					<Link href="/dashboard/home">
+						<a>
+							<Logo>
+								<img src="/img/landing/logo.png" alt="Whynot53" />
+							</Logo>
+						</a>
+					</Link>
+
 					<Routes>
 						<Item path="/dashboard/home" title="Home" />
 						<Item path="/dashboard/add-assignment#assign" title="Assignments" />
@@ -67,7 +72,6 @@ export default function Navbar() {
 	);
 }
 
-// 	<ProfilePic src="/img/user.svg" alt="ProfilePic" />
 const Item = (props) => {
 	const router = useRouter();
 	return (

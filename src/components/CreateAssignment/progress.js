@@ -25,7 +25,7 @@ const IconContainer = styled.div`
 	}
 
 	& > div {
-		background-color: lightgray;
+		background-color: ${(props) => props.theme.colors.gray};
 		border-radius: 50%;
 		height: 60px;
 		width: 60px;

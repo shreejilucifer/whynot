@@ -23,7 +23,9 @@ export default function CreateAssignment() {
 				)}
 				{stage === 75 && <Schedule onSubmit={() => setStage(100)} />}
 				{stage === 100 && (
-					<Completion onSubmit={() => router.push('/dashboard/assignments')} />
+					<Completion
+						onSubmit={() => router.push('/dashboard/add-assignment#assign')}
+					/>
 				)}
 			</Card>
 		</React.Fragment>

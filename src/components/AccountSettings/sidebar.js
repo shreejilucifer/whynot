@@ -28,6 +28,7 @@ export const Container = styled.div`
 		&:hover {
 			background-color: #e9eded;
 		}
+
 		& a {
 			width: 100%;
 			display: grid;

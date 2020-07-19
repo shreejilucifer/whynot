@@ -66,7 +66,7 @@ export const FormContainer = styled.form`
 		font-size: 1rem;
 		padding: 2%;
 		border-radius: 0.2em;
-		border: 1px solid #dfe4ef;
+		border: 1px solid ${(props) => props.theme.colors.tertiary};
 		background: none;
 		font-family: ${(props) => props.theme.fonts.primary};
 	}
