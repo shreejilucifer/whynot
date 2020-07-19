@@ -47,7 +47,7 @@ export const Logo = styled.div`
 	justify-content: center;
 	align-items: center;
 	& > img {
-		height: 40px;
+		height: 70px;
 	}
 `;
 

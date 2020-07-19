@@ -145,8 +145,9 @@ export const NavbarBrand = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	width: 5em;
 	& img {
-		height: 30px;
+		width: 100%;
 	}
 `;
 
