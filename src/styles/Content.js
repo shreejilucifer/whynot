@@ -19,6 +19,7 @@ export const TableHeader = styled.div`
 		justify-content: center;
 		align-items: center;
 		font-family: ${(props) => props.theme.fonts.primary};
+		font-size: 0.9rem;
 		color: ${(props) => props.theme.colors.primary};
 	}
 `;

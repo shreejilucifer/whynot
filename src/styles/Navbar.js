@@ -169,6 +169,7 @@ export const Caret = styled.img`
 
 export const DropDown = styled.div`
 	position: absolute;
+	z-index: 5;
 	top: 0;
 	right: 0;
 	margin-top: 70px;

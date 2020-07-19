@@ -15,7 +15,13 @@ export const Box = styled.img`
 	width: 4em;
 `;
 
-export const Text = styled.p`
+export const Text = styled.a`
 	margin-top: 1.5em;
 	font-family: ${(props) => props.theme.fonts.primary};
+	text-decoration: none;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+	}
 `;

@@ -29,7 +29,7 @@ export default function Navbar() {
 					</Logo>
 					<Routes>
 						<Item path="/dashboard/home" title="Home" />
-						<Item path="/dashboard/assignments" title="Assignments" />
+						<Item path="/dashboard/add-assignment#assign" title="Assignments" />
 					</Routes>
 				</Brand>
 				<Options>
