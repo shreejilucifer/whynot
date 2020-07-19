@@ -29,6 +29,7 @@ export const Title = styled.h1`
 export const SubTitle = styled.h4`
 	font-family: ${(props) => props.theme.fonts.landing};
 	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.5;
 	text-align: center;
 	font-weight: 500;
 	margin-top: 15px;
@@ -115,6 +116,7 @@ export const FormSubTitle = styled.p`
 	margin-top: 20px;
 	font-family: ${(props) => props.theme.fonts.landing};
 	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.5;
 	font-weight: 400;
 	font-size: 15px;
 `;
@@ -124,6 +126,7 @@ export const CompaniesTitle = styled.p`
 	margin-top: 100px;
 	font-family: ${(props) => props.theme.fonts.landing};
 	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.5;
 `;
 
 export const CompanyGrid = styled.div`

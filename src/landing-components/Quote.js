@@ -21,6 +21,7 @@ export const QuoteTitle = styled.h2`
 export const QuoteSubtitle = styled.h3`
 	font-family: ${(props) => props.theme.fonts.landing};
 	color: ${(props) => props.theme.colors.primary};
+	opacity: 0.6;
 	margin-top: 18px;
 	width: 80%;
 	text-align: center;
