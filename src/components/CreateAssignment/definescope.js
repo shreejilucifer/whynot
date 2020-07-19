@@ -20,7 +20,7 @@ export const EmailContainer = styled.div`
 	& > input {
 		height: 2rem;
 		font-size: 1rem;
-		border: 1px solid ${(props) => props.theme.colors.orange};
+		border: 1px solid ${(props) => props.theme.colors.tertiary};
 		background: none;
 		border-radius: 3px;
 		width: 80%;
@@ -142,7 +142,9 @@ export const Item = ({ text, options }) => {
 
 export const Ring = ({ text, onClick, checked }) => (
 	<div onClick={onClick}>
-		<S.Radio checked={checked ? 'checked' : 'unchecked'} />
+		<S.RadioContainer checked={checked ? 'checked' : 'unchecked'}>
+			<S.Radio checked={checked ? 'checked' : 'unchecked'} />
+		</S.RadioContainer>
 		<span>{text}</span>
 	</div>
 );

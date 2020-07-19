@@ -46,7 +46,7 @@ export const RingGrid = styled.div`
 			cursor: pointer;
 
 			& > div {
-				border: 4px solid ${(props) => props.theme.colors.darkorange};
+				border: 4px solid ${(props) => props.theme.colors.primary};
 			}
 		}
 		@media only screen and (max-width: 768px) {
@@ -75,21 +75,31 @@ export const RingGrid = styled.div`
 	}
 `;
 
-export const Radio = styled.div`
+export const RadioContainer = styled.div`
+	border: 4px solid ${(props) => props.theme.colors.primary};
+	border-radius: 50%;
 	height: 30px;
 	width: 30px;
-	border-radius: 15px;
-	border: 2px solid ${(props) => props.theme.colors.orange};
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const Radio = styled.div`
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background-color: ${(props) => props.theme.colors.white};
 
 	&:hover {
-		cursor: pointer;
-		border: 4px solid ${(props) => props.theme.colors.darkorange};
+		background-color: ${(props) => props.theme.colors.primary};
 	}
 
 	${(props) =>
 		props.checked === 'checked' &&
 		css`
-			background-color: ${(props) => props.theme.colors.orange};
+			background-color: ${(props) => props.theme.colors.primary};
 		`}
 `;
 
@@ -130,8 +140,8 @@ export const InputGroup = styled.div`
 		font-family: ${(props) => props.theme.fonts.landing};
 		width: 30%;
 		height: 100%;
-		background-color: ${(props) => props.theme.colors.orange};
-		color: ${(props) => props.theme.colors.white};
+
+		color: ${(props) => props.theme.colors.primary};
 		border: none;
 		font-size: 1rem;
 		outline: none;
@@ -140,15 +150,16 @@ export const InputGroup = styled.div`
 		-moz-appearance: none;
 		&:hover {
 			cursor: pointer;
-			background-color: ${(props) => props.theme.colors.darkorange};
+			background-color: rgba(0, 0, 0, 0.05);
 		}
 
-		background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='40' viewBox='0 0 30 30' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h30v30H0z' fill='none'/></svg>");
+		background-image: url('/img/down-arrow.svg');
+		background-size: 4%;
 		background-repeat: no-repeat;
 		background-position-x: 90%;
 		background-position-y: 50%;
-		border-top: 1px solid ${(props) => props.theme.colors.darkorange};
-
+		border-top: 1px solid ${(props) => props.theme.colors.tertiary};
+		border-right: 1px solid ${(props) => props.theme.colors.tertiary};
 		@media only screen and (max-width: 768px) {
 			font-size: 14px;
 		}
@@ -290,7 +301,9 @@ export const Item = ({ text, options }) => {
 
 export const Ring = ({ text, onClick, checked }) => (
 	<div onClick={onClick}>
-		<Radio checked={checked ? 'checked' : 'unchecked'} />
+		<RadioContainer checked={checked ? 'checked' : 'unchecked'}>
+			<Radio checked={checked ? 'checked' : 'unchecked'} />
+		</RadioContainer>
 		<span>{text}</span>
 	</div>
 );

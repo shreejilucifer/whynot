@@ -51,15 +51,16 @@ export const TableRow = styled.div`
 			color: ${(props) => props.theme.colors.white};
 			font-family: ${(props) => props.theme.fonts.primary};
 			&:hover {
+				background-color: ${(props) => props.theme.colors.darkorange};
 				cursor: pointer;
 			}
 		}
 
 		& > div {
-			color: ${(props) => props.theme.colors.tertiary};
+			color: ${(props) => props.theme.colors.primary};
 
 			&:hover {
-				color: ${(props) => props.theme.colors.primary};
+				color: ${(props) => props.theme.colors.tertiary};
 			}
 		}
 	}

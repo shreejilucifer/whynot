@@ -158,7 +158,6 @@ export const ProfilePic = styled.img`
 `;
 
 export const Username = styled.div`
-	margin-left: 1.5em;
 	font-family: ${(props) => props.theme.fonts.primary};
 	color: ${(props) => props.theme.colors.primary};
 `;
@@ -166,4 +165,38 @@ export const Username = styled.div`
 export const Caret = styled.img`
 	margin-left: 1.5em;
 	height: 1em;
+`;
+
+export const DropDown = styled.div`
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 70px;
+	margin-right: 3%;
+	border-radius: 3px;
+	background-color: ${(props) => props.theme.colors.white};
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+	& > a {
+		text-decoration: none;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid ${(props) => props.theme.colors.gray};
+		&:last-child {
+			border-bottom: none;
+		}
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.02);
+		}
+		& > p {
+			font-family: ${(props) => props.theme.fonts.primary};
+			text-align: center;
+			color: ${(props) => props.theme.colors.primary};
+		}
+	}
 `;

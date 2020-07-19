@@ -58,10 +58,7 @@ const IconContainer = styled.div`
 export default function Progress({ percent }) {
 	return (
 		<Container>
-			<ProgressBar
-				filledBackground="linear-gradient(to right, #34b3d3, #48486e)"
-				percent={percent}
-			>
+			<ProgressBar filledBackground="#48486e" percent={percent}>
 				<Step transition="skew">
 					{({ accomplished, index }) => (
 						<IconContainer active={accomplished}>

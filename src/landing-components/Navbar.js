@@ -154,11 +154,10 @@ export const Route = styled.div`
 	margin-left: 25px;
 	font-family: ${(props) => props.theme.fonts.landing};
 	text-decoration: none;
-	color: ${(props) => props.theme.colors.primary};
-	opacity: 0.5;
+	color: ${(props) => props.theme.colors.tertiary};
 
 	&:hover {
-		opacity: 1;
+		color: ${(props) => props.theme.colors.primary};
 	}
 
 	display: flex;
@@ -167,8 +166,12 @@ export const Route = styled.div`
 	height: 100%;
 	font-size: 15px;
 	& a {
-		color: ${(props) => props.theme.colors.primary};
+		color: ${(props) => props.theme.colors.tertiary};
 		text-decoration: none;
+
+		&:hover {
+			color: ${(props) => props.theme.colors.primary};
+		}
 	}
 	& img {
 		height: 10px;

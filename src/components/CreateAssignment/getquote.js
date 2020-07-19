@@ -47,7 +47,7 @@ export default function GetAQuote(props) {
 					}}
 				>
 					<img
-						src="/img/file-download.svg"
+						src="/img/dashboard/report.png"
 						alt="Download Report"
 						style={{
 							height: '70px',
@@ -55,6 +55,12 @@ export default function GetAQuote(props) {
 							alignSelf: 'center',
 						}}
 					/>
+					<br />
+					<Info>
+						<p style={{ marginTop: '0px', textAlign: 'center' }}>
+							Download Report
+						</p>
+					</Info>
 					<br />
 					<div style={{ display: 'flex', justifyContent: 'center' }}>
 						<Button style={{ marginLeft: '0px' }} active={false}>

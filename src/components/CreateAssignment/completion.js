@@ -1,11 +1,4 @@
-import {
-	Info,
-	FormContainer,
-	Button,
-	Errors,
-	SuccessContainer,
-	SuccessBtn,
-} from '../../styles/Forms';
+import { FormContainer, Button, Errors } from '../../styles/Forms';
 import { Label } from 'src/landing-components/SiteStats';
 
 export default function Completion(props) {
@@ -16,12 +9,11 @@ export default function Completion(props) {
 			</Label>
 			<textarea
 				style={{ textAlign: 'center', width: '50%', alignSelf: 'center' }}
-			>
-				Now you can manage all approved assignments on the 'Assignments' tab.
+				defaultValue="Now you can manage all approved assignments on the 'Assignments' tab.
 				For any queries please contact your account manager. We are really
 				excited to work with you and look forward to the 'Assignment Day'.
-				Cheers!
-			</textarea>
+				Cheers!"
+			/>
 			<div
 				style={{
 					display: 'flex',
@@ -32,11 +24,11 @@ export default function Completion(props) {
 			>
 				<Button
 					active={false}
-					onClick={() => router.push('/dashboard/add-assignment')}
+					onClick={() => console.log('Add New Assignment')}
 				>
 					Add New Assignment
 				</Button>
-				<Button type="submit" active={true} onClick={() => props.onSubmit()}>
+				<Button type="submit" active={true} onClick={props.onSubmit}>
 					Go to Assignments Tab
 				</Button>
 			</div>

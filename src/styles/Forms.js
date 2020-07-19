@@ -42,6 +42,7 @@ export const Info = styled.div`
 		padding-top: 5px;
 		padding-bottom: 5px;
 		&:hover {
+			background-color: ${(props) => props.theme.colors.darkorange};
 			cursor: pointer;
 		}
 	}
@@ -89,10 +90,10 @@ export const Button = styled.button`
 	margin-left: 1.5em;
 	font-family: ${(props) => props.theme.fonts.primary};
 	font-size: 1rem;
-	padding-left: 5%;
-	padding-right: 5%;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 	border: none;
 	border-radius: 3px;
 	&:hover {
@@ -105,12 +106,16 @@ export const Button = styled.button`
 					color: ${(props) => props.theme.colors.white};
 
 					&:hover {
-						background-color: ${(props) => props.theme.colors.tertiary};
+						background-color: ${(props) => props.theme.colors.darkorange};
 					}
 			  `
 			: css`
 					background-color: transparent;
 					border: 1px solid ${(props) => props.theme.colors.tertiary};
+
+					&:hover {
+						background-color: rgba(0, 0, 0, 0.02);
+					}
 			  `}
 `;
 
@@ -164,9 +169,12 @@ export const SuccessBtn = styled.button`
 `;
 
 export const TimeContainer = styled.div`
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -175,17 +183,22 @@ export const TimeContainer = styled.div`
 		padding: 5px;
 		border-radius: 3px;
 		font-family: ${(props) => props.theme.fonts.primary};
-		font-size: 18px;
+		font-size: 1rem;
 		border: 1px solid ${(props) => props.theme.colors.orange};
 	}
 	& > p {
-		margin-left: 2em;
-		margin-right: 2em;
 		font-family: ${(props) => props.theme.fonts.primary};
 		font-size: 18px;
 	}
 	& > select {
-		margin-left: 2em;
 		padding-right: 5%;
+	}
+
+	@media only screen and (max-width: 1024px) {
+		width: 100%;
+		& > input,
+		& > select {
+			font-size: 0.9rem;
+		}
 	}
 `;

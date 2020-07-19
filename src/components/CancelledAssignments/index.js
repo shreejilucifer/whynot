@@ -1,7 +1,7 @@
 import Card from '../Card';
 import { Table, TableHeader, TableRow } from '../../styles/Content';
 
-const colSpan = '25% 10% 15% auto';
+const colSpan = '25% 15% 15% auto';
 
 export default function CancelledAssignments() {
 	return (
@@ -63,7 +63,7 @@ export const Row = ({
 			<p>{name}</p>
 			<a href={url}>{url}</a>
 		</span>
-		<span style={{ alignItems: 'center' }}>
+		<span style={{ alignItems: 'flex-start', paddingLeft: '10px' }}>
 			<p>{cancelledDate}</p>
 		</span>
 		<span style={{ alignItems: 'flex-start', paddingLeft: '10px' }}>

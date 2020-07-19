@@ -34,7 +34,7 @@ const theme = {
 		background: '#f2f4f8',
 		tertiary: '#34b3d3',
 		orange: '#f6416c',
-		darkorange: '#34b3d3',
+		darkorange: '#FA2254',
 	},
 	fonts: {
 		primary: `'Open Sans', sans-serif`,

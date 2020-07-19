@@ -4,8 +4,6 @@ import {
 	FormContainer,
 	Button,
 	Errors,
-	SuccessContainer,
-	SuccessBtn,
 	TimeContainer,
 } from '../../styles/Forms';
 
