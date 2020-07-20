@@ -153,3 +153,77 @@ export const Password = styled.div`
 		}
 	}
 `;
+
+export const Title = styled.div`
+	& > span,
+	& a {
+		font-family: ${(props) => props.theme.fonts.primary};
+		color: ${(props) => props.theme.colors.primary};
+	}
+	& > span {
+		font-size: 19px;
+		font-weight: 600;
+	}
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	& a {
+		text-decoration: none;
+		background-color: ${(props) => props.theme.colors.orange};
+		color: ${(props) => props.theme.colors.white};
+		&:hover {
+			background-color: ${(props) => props.theme.colors.darkorange};
+		}
+		padding-top: 9px;
+		padding-bottom: 9px;
+		padding-left: 18px;
+		padding-right: 18px;
+		border-radius: 3px;
+	}
+`;
+
+export const ShowCaseInvite = styled.div`
+	padding-top: 20px;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	& > img {
+		width: 20%;
+		opacity: 0.2;
+	}
+
+	& > h2,
+	& > p,
+	& a {
+		font-family: ${(props) => props.theme.fonts.primary};
+		color: ${(props) => props.theme.colors.primary};
+	}
+
+	& > h2 {
+		font-weight: 500px;
+		margin-bottom: 10px;
+	}
+
+	& > p {
+		margin-bottom: 10px;
+		opacity: 0.8;
+	}
+
+	& a {
+		border: 1px solid ${(props) => props.theme.colors.tertiary};
+		padding-left: 18px;
+		padding-right: 18px;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		border-radius: 3px;
+		text-decoration: none;
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.04);
+		}
+	}
+`;
