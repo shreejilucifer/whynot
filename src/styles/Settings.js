@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
 	display: flex;
@@ -181,6 +181,13 @@ export const Title = styled.div`
 		padding-left: 18px;
 		padding-right: 18px;
 		border-radius: 3px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		& > img {
+			height: 15px;
+			width: 15px;
+		}
 	}
 `;
 
@@ -224,6 +231,79 @@ export const ShowCaseInvite = styled.div`
 		text-decoration: none;
 		&:hover {
 			background-color: rgba(0, 0, 0, 0.04);
+		}
+	}
+`;
+
+export const Invite = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+
+	& > section {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 40px;
+		& > label {
+			font-family: ${(props) => props.theme.fonts.primary};
+			font-weight: 600;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+
+		& > input {
+			border-radius: 3px;
+			border: 1px solid ${(props) => props.theme.colors.tertiary};
+			height: 40px;
+			padding-left: 10px;
+			font-size: 15px;
+		}
+	}
+
+	& > button {
+		width: 25%;
+		padding-top: 9px;
+		padding-bottom: 9px;
+		background-color: ${(props) => props.theme.colors.orange};
+		color: ${(props) => props.theme.colors.white};
+		font-family: ${(props) => props.theme.fonts.primary};
+		border: none;
+		border-radius: 3px;
+		font-size: 17px;
+		&:hover {
+			background-color: ${(props) => props.theme.colors.darkorange};
+			cursor: pointer;
+		}
+	}
+`;
+
+export const InviteOption = styled.div`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	${(props) =>
+		props.checked
+			? css`
+					border: 1px solid ${(props) => props.theme.colors.orange};
+			  `
+			: css`
+					border: 1px solid rgba(0, 0, 0, 0.2);
+			  `}
+	padding: 20px;
+	& > input {
+		margin-right: 20px;
+	}
+
+	& > span {
+		display: flex;
+		flex-direction: column;
+		font-family: ${(props) => props.theme.fonts.primary};
+
+		& > p {
+			font-size: 14px;
+			color: rgba(0, 0, 0, 0.5);
 		}
 	}
 `;

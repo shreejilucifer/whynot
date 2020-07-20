@@ -19,7 +19,7 @@ export const Container = styled.div`
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		height: 50px;
+
 		width: 90%;
 		padding-left: 5%;
 
@@ -30,6 +30,8 @@ export const Container = styled.div`
 		}
 
 		& a {
+			padding-top: 15px;
+			padding-bottom: 15px;
 			width: 100%;
 			display: grid;
 			grid-template-columns: 20% 80%;
