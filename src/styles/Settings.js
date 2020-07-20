@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const SubTitle = styled.p`
 	margin-top: 5px;
 	color: ${(props) => props.theme.colors.primary};
+	font-family: ${(props) => props.theme.fonts.primary};
 	opacity: 0.5;
 `;
 
@@ -304,6 +305,44 @@ export const InviteOption = styled.div`
 		& > p {
 			font-size: 14px;
 			color: rgba(0, 0, 0, 0.5);
+		}
+	}
+`;
+
+export const Billing = styled.div`
+	display: grid;
+	grid-template-columns: 50% 50%;
+	padding-top: 50px;
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid ${(props) => props.theme.colors.gray};
+	& > div {
+		& > h3 {
+			font-family: ${(props) => props.theme.fonts.primary};
+			color: ${(props) => props.theme.colors.primary};
+			font-weight: 600;
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		& > p {
+			font-family: ${(props) => props.theme.fonts.primary};
+			color: ${(props) => props.theme.colors.primary};
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 10px;
+			& > span {
+				margin-top: 5px;
+				font-size: 14px;
+			}
+			& > span:first-child {
+				font-weight: 600;
+			}
+		}
+
+		& > p:last-child {
+			opacity: 0.5;
+			font-size: 14px;
 		}
 	}
 `;
