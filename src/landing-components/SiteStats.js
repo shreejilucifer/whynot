@@ -4,8 +4,6 @@ import { InputContainer } from './Hero';
 import { Container } from './CommonStyles';
 import Link from 'next/link';
 
-const COLORS = ['#FF5722', '#808080'];
-
 export const SiteStatsWrapper = styled.div`
 	background-color: #fafbfb;
 	@media only screen and (max-width: 768px) {
@@ -136,7 +134,9 @@ export const InputGroup = styled.div`
 		}
 	}
 
-	& > select {
+	& > select,
+	& > input,
+	& > div {
 		font-family: ${(props) => props.theme.fonts.landing};
 		width: 30%;
 		height: 100%;
@@ -162,6 +162,25 @@ export const InputGroup = styled.div`
 		border-right: 1px solid ${(props) => props.theme.colors.tertiary};
 		@media only screen and (max-width: 768px) {
 			font-size: 14px;
+		}
+	}
+
+	& > input {
+		background: none;
+	}
+
+	& > div {
+		padding-left: 0;
+		background: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		& > span {
+		}
+		& > input {
+			height: 100%;
+			width: 100%;
 		}
 	}
 `;
@@ -216,29 +235,19 @@ export const SiteStats = () => {
 			<SiteStatsContainer>
 				<RingGrid>
 					<Ring
-						text="Bug Bounty"
-						onClick={() => onClickService('Bug Bounty')}
-						checked={isChecked('Bug Bounty')}
-					/>
-					<Ring
 						text="Web App VAP"
 						onClick={() => onClickService('Web App VAP')}
 						checked={isChecked('Web App VAP')}
 					/>
 					<Ring
-						text="Mobile App VA"
-						onClick={() => onClickService('Mobile App VA')}
-						checked={isChecked('Mobile App VA')}
+						text="Mobile App VAP"
+						onClick={() => onClickService('Mobile App VAP')}
+						checked={isChecked('Mobile App VAP')}
 					/>
 					<Ring
 						text="Network Security"
 						onClick={() => onClickService('Network Security')}
 						checked={isChecked('Network Security')}
-					/>
-					<Ring
-						text="Cloud Security"
-						onClick={() => onClickService('Cloud Security')}
-						checked={isChecked('Cloud Security')}
 					/>
 					<Ring
 						text="Source Code"
@@ -247,18 +256,147 @@ export const SiteStats = () => {
 					/>
 				</RingGrid>
 				<StatsContainer>
-					<Item
-						text="What programming languages & frameworks are in use?"
-						options={['Laravel', 'NextJS', 'Django', 'Express']}
-					/>
-					<Item text="How many lines of code are there to audit(cloc output welcome)" />
-					<Item text="How many applications are in scope, back-end too?" />
-					<Item text="How many servers are in scope? SSH access will be granted?" />
-					<Item text="How many mobile apps are in scope, what platforms?" />
-					<Item text="How many permission model inside application?" />
-					<Item text="WAF used if there is any." />
-					<Item text="Is that live environment or staging environment?" />
-					<Item text="What will be the time constraint if testing place in live enviroment" />
+					{/* 1 */}
+					{(isChecked('Web App VAP') ||
+						isChecked('Mobile App VAP') ||
+						isChecked('Source Code')) && (
+						<InputGroup>
+							<span>What programming languages & frameworks are in use?</span>
+							<input type="text" placeholder="Laravel, Django, Express" />
+						</InputGroup>
+					)}
+					{isChecked('Source Code') && (
+						<InputGroup>
+							<span>
+								How many lines of code are there to audit(cloc output welcome)
+							</span>
+							<select>
+								<option value="">Select</option>
+								<option value="<20,000">{'< 20,000'}</option>
+								<option value="20,000-50,000">20,000 - 50,000</option>
+								<option value="50,000-100,000">50,000-100,000</option>
+								<option value=">100,000">{'> 100,000'}</option>
+							</select>
+						</InputGroup>
+					)}
+
+					{/* 3 */}
+					{isChecked('Web App VAP') && (
+						<InputGroup>
+							<span>How many subdomains are in scope, back-end too?</span>
+							<input type="text" placeholder="All or 25" />
+						</InputGroup>
+					)}
+
+					{/* 4 */}
+					{(isChecked('Web App VAP') ||
+						isChecked('Mobile App VAP') ||
+						isChecked('Network Security')) && (
+						<InputGroup>
+							<span>Type of authentication for the application testing?</span>
+							<select>
+								<option value="">Select</option>
+								<option value="Authenticated">Authenticated</option>
+								<option value="Unauthenticated">Unauthenticated</option>
+							</select>
+						</InputGroup>
+					)}
+
+					{/* 5 */}
+					{isChecked('Network Security') && (
+						<InputGroup>
+							<span>How many servers are in scope?</span>
+							<input type="text" placeholder="10" />
+						</InputGroup>
+					)}
+
+					{/* 6 */}
+					{isChecked('Network Security') && (
+						<InputGroup>
+							<span>SSH access will be granted?</span>
+							<input type="text" placeholder="Yes or No" />
+						</InputGroup>
+					)}
+
+					{/* 7 */}
+					{isChecked('Mobile App VAP') && (
+						<InputGroup>
+							<span>How many mobile apps are in scope?</span>
+							<input type="text" placeholder="10" />
+						</InputGroup>
+					)}
+
+					{/* 8 */}
+					{(isChecked('Web App VAP') || isChecked('Mobile App VAP')) && (
+						<InputGroup>
+							<span>How many permission models inside the application?</span>
+							<select>
+								<option value="">Select</option>
+								<option value="1-10">1 - 10</option>
+								<option value="More than 10">More than 10</option>
+							</select>
+						</InputGroup>
+					)}
+
+					{/* 9 */}
+					{(isChecked('Web App VAP') ||
+						isChecked('Mobile App VAP') ||
+						isChecked('Network Security')) && (
+						<InputGroup>
+							<span>WAF used, name if there is any.</span>
+							<div>
+								<span>
+									<input type="radio" name="waf" /> Yes &nbsp; &nbsp;
+									<input type="radio" name="waf" /> No
+								</span>
+								{/*<input type="text" placeholder="Software based WAF: ModSecurity" />*/}
+							</div>
+						</InputGroup>
+					)}
+
+					{/* 10 */}
+					{(isChecked('Web App VAP') ||
+						isChecked('Mobile App VAP') ||
+						isChecked('Network Security')) && (
+						<InputGroup>
+							<span>
+								If the application has WAF then how the application should be
+								tested?
+							</span>
+							<select>
+								<option value="">Select</option>
+								<option value="Without WAF">Without WAF</option>
+								<option value="With WAF">With WAF</option>
+							</select>
+						</InputGroup>
+					)}
+
+					{/* 11 */}
+					{(isChecked('Web App VAP') ||
+						isChecked('Mobile App VAP') ||
+						isChecked('Network Security')) && (
+						<InputGroup>
+							<span>The testing environment would be?</span>
+							<select>
+								<option value="">Select</option>
+								<option value="Live environment">Live environment</option>
+								<option value="Staging environment">Staging environment</option>
+							</select>
+						</InputGroup>
+					)}
+
+					{/* 12 */}
+					{(isChecked('Web App VAP') ||
+						isChecked('Mobile App VAP') ||
+						isChecked('Network Security')) && (
+						<InputGroup>
+							<span>
+								What will be the time constraint if testing place in live
+								environment?
+							</span>
+							<input type="datetime-local" />
+						</InputGroup>
+					)}
 				</StatsContainer>
 				<MailContainer>
 					<Label>Work Email Address</Label>
